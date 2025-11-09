@@ -3,7 +3,7 @@ import axios from 'axios'
 // npx json-server --watch db.json --port 5000 //!   run it for
 
 export const APIreg = axios.create({
-  baseURL: 'http://localhost:3000/registerAuth',
+  baseURL: 'https://mern-auth2hr-wvzs-2gv738ksn-rehman0rehan-gmailcoms-projects.vercel.app',
   withCredentials: true
 })
 

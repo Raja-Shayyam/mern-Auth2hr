@@ -2,7 +2,7 @@ import { mongoose } from 'mongoose'
 import 'dotenv/config';
 
 
-export const conectOdb = async () => {
+export const conectOdb = async (isConected) => {
   try {
     await mongoose.connect(process.env.MONGODB_COMPAS)
     // await mongoose.connect(process.env.MONGO_ATLS_2)

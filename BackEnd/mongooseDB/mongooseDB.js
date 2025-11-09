@@ -13,14 +13,14 @@ export const conectOdb = async () => {
 
   try {
     mongoose.set('strictQuery', false)
-    await mongoose.connect(process.env.MONGODB_COMPAS, {
-      bufferCommands: false, // Disable buffering for serverless
-      maxPoolSize: 10, // Limit connection pool
-    })
-    // await mongoose.connect(process.env.MONGO_ATLS_2, {
+    // await mongoose.connect(process.env.MONGODB_COMPAS, {
     //   bufferCommands: false, // Disable buffering for serverless
     //   maxPoolSize: 10, // Limit connection pool
     // })
+    await mongoose.connect(process.env.MONGO_ATLS_2, {
+      bufferCommands: false, // Disable buffering for serverless
+      maxPoolSize: 10, // Limit connection pool
+    })
     console.log('connection established');
     isConected = true;
   } catch (error) {

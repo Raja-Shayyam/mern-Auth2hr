@@ -10,7 +10,8 @@ const myPort = process.env.PORT
 const App = express()
 
 App.use(cors({
-  origin: 'http://localhost:5173', // Your frontend URL
+  origin: 'http://localhost:5173', // Your local frontend URL
+  origin: 'https://mern-auth2hr-wvzs-2gv738ksn-rehman0rehan-gmailcoms-projects.vercel.app', // Your frontend URL
   credentials: true // Allow cookies to be sent
 }))
 

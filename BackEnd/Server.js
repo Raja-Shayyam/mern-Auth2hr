@@ -39,14 +39,14 @@ App.get('/test-cookie', (req, res) => {
 
 
 //* middleWare  
-App.use(async (req, res, next) => {
-  const isConected = false;
-  if (!isConected){
-    await conectOdb(isConected)
+// App.use(async (req, res, next) => {
+//   const isConected = false;
+//   if (!isConected){
+    await conectOdb()
     console.log('connected to db', getDB());
-  }
-  next();
-})
+//   }
+//   next();
+// })
 
 
 //* Routes  
@@ -60,4 +60,4 @@ App.use('/myproducts', prodRouter)
 //& never in vercel
 
 
-export default App() ;
+export default App ;

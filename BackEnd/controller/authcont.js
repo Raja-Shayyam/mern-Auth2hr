@@ -67,7 +67,10 @@ export const Logined = async (req, res) => {
     res.cookie('hi', 'kookoo-test')
     res.cookie('a-token', g, {
       httpOnly: true,
-      secure: false, // false for localhost
+      secure: process.env.NODE_ENV === 'production', // true in production
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+      // httpOnly: true,
+      // secure: false, // false for localhost
     })
 
     return res.status(202).json({ sucess: true, message: "user Logined with good credentials ", user: validUser, token: g })
@@ -79,10 +82,10 @@ export const Logined = async (req, res) => {
 }
 
 
-export const LogOut = async (req,res) => {
+export const LogOut = async (req, res) => {
   try {
     console.log(res);
-    
+
     // Clear the authentication cookie
     res.clearCookie('a-token', {
       httpOnly: true,

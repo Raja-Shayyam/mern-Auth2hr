@@ -54,8 +54,8 @@ App.use(async (req, res, next) => {
 // App.use(async (req, res, next) => {
 //   const isConected = false;
 //   if (!isConected){
-    // await conectOdb()
-    // console.log('connected to db', getDB());
+// await conectOdb()
+// console.log('connected to db', getDB());
 //   }
 //   next();
 // })
@@ -66,10 +66,10 @@ App.use('/registerAuth', AuthRout)
 App.use('/myproducts', prodRouter)
 
 
-App.listen(myPort, () => {
-  console.log('server runing on ', myPort);
-})
+// App.listen(myPort, () => {
+//   console.log('server runing on ', myPort);
+// })
 //& never in vercel
 
 
-// export default App ;
+export default App ;

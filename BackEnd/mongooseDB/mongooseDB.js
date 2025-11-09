@@ -1,7 +1,7 @@
 import { mongoose } from 'mongoose'
 import 'dotenv/config';
 
-const isConected = false;
+let isConected = false;
 
 export const conectOdb = async () => {
 

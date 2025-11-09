@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import 'dotenv/config'
-import getDB ,{ conectOdb } from './mongooseDB/mongooseDB.js' //^ {getDB , conn..}
+import getDB, { conectOdb } from './mongooseDB/mongooseDB.js' //^ {getDB , conn..}
 import AuthRout from './Routes/auth.js'
 import prodRouter from './Routes/Products.js'
 
@@ -39,14 +39,25 @@ App.get('/test-cookie', (req, res) => {
 
 
 //* middleWare  
-App.use('/registerAuth', AuthRout)
-App.use('/myproducts',prodRouter)
-
-
-await conectOdb()
-console.log('connected to db', getDB());
-
-App.listen(myPort, () => {
-  console.log('server runing on ', myPort);
+App.use(async (req, res, next) => {
+  const isConected = false;
+  if (!isConected){
+    await conectOdb(isConected)
+    console.log('connected to db', getDB());
+  }
+  next();
 })
 
+
+//* Routes  
+App.use('/registerAuth', AuthRout)
+App.use('/myproducts', prodRouter)
+
+
+// App.listen(myPort, () => {
+//   console.log('server runing on ', myPort);
+// })
+//& never in vercel
+
+
+export default App() ;

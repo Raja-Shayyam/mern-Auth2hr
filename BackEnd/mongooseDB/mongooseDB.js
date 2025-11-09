@@ -7,7 +7,7 @@ export const conectOdb = async () => {
     await mongoose.connect(process.env.MONGODB_COMPAS)
     // await mongoose.connect(process.env.MONGO_ATLS_2)
     console.log('connection established');
-
+    isConected = true;
   } catch (error) {
     console.error('DB connection', error.message);
     process.exit(1)

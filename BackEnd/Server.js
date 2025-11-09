@@ -39,11 +39,21 @@ App.get('/test-cookie', (req, res) => {
 
 
 //* middleWare  
+App.use(async (req, res, next) => {
+  try {
+    await conectOdb()
+    next()
+  } catch (error) {
+    console.error('DB connection error:', error)
+    res.status(500).json({ error: 'Database connection failed' })
+  }
+})
+
 // App.use(async (req, res, next) => {
 //   const isConected = false;
 //   if (!isConected){
-    await conectOdb()
-    console.log('connected to db', getDB());
+    // await conectOdb()
+    // console.log('connected to db', getDB());
 //   }
 //   next();
 // })

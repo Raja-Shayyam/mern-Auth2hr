@@ -21,7 +21,8 @@ export const ToProt = () => {
 }
 
 export const APIProd = axios.create({
-  baseURL: 'http://localhost:3000/myproducts',
+  // baseURL: 'http://localhost:3000/myproducts',
+  baseURL: 'https://mern-auth2hr-wvzs.vercel.app/myproducts',
   withCredentials: true
 })
 

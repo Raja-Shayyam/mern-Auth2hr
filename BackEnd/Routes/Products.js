@@ -7,6 +7,7 @@ import { allUserProds } from "../controller/getALLusers.js"
 
 const prodRouter = express.Router()
 
+//   /myproducts/getALLprod
 prodRouter.post("/create/:uID", CreatedUserproduct)
 prodRouter.post("/update/:pid", updating)
 prodRouter.delete('/Delete/:did',deleteP)

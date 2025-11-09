@@ -1,0 +1,32 @@
+body::-webkit-scrollbar {
+  /* Chrome, Edge, Safari */
+  display: none;
+}
+
+@media only screen and (max-width: 575px) {
+ 
+  /* .logo-margin {
+  margin-right: clamp(1em, 5vw, 5em);
+/* minimum 1em, preferred 5vw, maximum 5em 
+}
+ */
+
+  .logo-margin {
+    margin-right: 3vw !important;
+  }
+
+}
+
+.newArivaal-style {
+  border-bottom: 1px solid white;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.profile-name {
+  font-size: 10px !important;
+}
+
+.logo-margin {
+  margin-right: 40vw;
+}

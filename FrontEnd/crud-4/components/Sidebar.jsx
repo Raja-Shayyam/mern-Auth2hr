@@ -29,8 +29,8 @@ export const Header = () => {
         {/* Mobile Header fixed-top*/}
         <div className="d-lg-none bg-white shadow-sm rounded-3 mx-auto mt-3  p-2 ">
           <div className="d-flex justify-content-between align-items-center h-8">
+            
             {/* Mobile Menu Toggle */}
-
             <div className="d-flex align-items-center w-25">
               <i className="bi bi-list fs-4 me-2" onClick={handleshow} ></i>
               <span className={`${show ? 'd-flex' : 'd-none'}`}>
@@ -52,13 +52,13 @@ export const Header = () => {
             </div>
 
             {/* Mobile Logo */}
-            <a title="Allbirds" className="flex-grow-1 text-center">
+            <a href="/"  title="Allbirds" className=" flex-grow-1 text-lg-center text-end logo-margin">
               {/* Using a single logo for simplicity */}
-              <img src="https://tse1.mm.bing.net/th/id/OIP.6vYGedCsOhG7bZooM4rG5gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Allbirds Logo" className="logo-dark" style={{ height: '30px', width: '60px' }} />
+              <img  src="https://tse1.mm.bing.net/th/id/OIP.6vYGedCsOhG7bZooM4rG5gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Allbirds Logo" className="logo-dark" style={{ height: '30px', width: '60px' }} />
             </a>
 
             {/* Mobile Right-side Icons */}
-            <div className="d-flex align-items-center gap-2">
+            <div className="d-none align-items-center gap-2">
               <a href="/search" title="Search" aria-label="Search">
                 <i className="bi bi-search fs-5"></i>
               </a>
@@ -71,7 +71,7 @@ export const Header = () => {
           </div>
 
           {/* Mobile Sub-navigation */}
-          <div className="d-flex flex-nowrap overflow-auto py-2">
+          <div className="d-flex flex-nowrap overflow-auto py-2 justify-content-evenly">
             {/* You can map over an array of links here */}
             <a href="/collections/mens" className="link-dark text-decoration-none text-uppercase me-3">Men</a>
             <a href="/collections/womens" className="link-dark text-decoration-none text-uppercase me-3">Women</a>
@@ -93,8 +93,8 @@ export const Header = () => {
           <div className="d-flex w-100 justify-content-between align-items-center">
             {/* Desktop Left-side and Nav */}
             <div className="d-flex align-items-center">
-              <a href="/" title="Allbirds" className="me-4">
-                <img src="https://tse1.mm.bing.net/th/id/OIP.6vYGedCsOhG7bZooM4rG5gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Allbirds Logo" style={{ height: '24px' }} />
+              <a href="/" title="Allbirds" className=" me-4">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.6vYGedCsOhG7bZooM4rG5gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Allbirds Logo" style={{ height: '33px' }} />
               </a>
               <nav className="d-flex gap-3 text-uppercase">
                 <a href="/collections/men" className="text-decoration-none link-dark">Men</a>

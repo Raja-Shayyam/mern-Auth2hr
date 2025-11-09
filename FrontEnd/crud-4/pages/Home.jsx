@@ -29,15 +29,15 @@ export const Home = () => {
       <div className="container pb-3">
         <div className="row">
           <div className="col-12 text-center mb-4">
-            <p className="h6 text-muted mb-3">ALL PRODUCTS</p>
+            <p className="fs-2 text-bold bg-dark text-light p-2 mb-3">ALL PRODUCTS</p>
             <div className="btn-group" role="group" aria-label="Product categories">
-              <button type="button" className="btn btn-outline-dark me-2">Home & Decor</button>
-              <button type="button" className="btn btn-dark active">Lifestyle & Travel</button>
+              <button type="button" className="btn btn-dark me-2">Home & Decor</button>
+              <button type="button" className="btn btn-light active">Lifestyle & Travel</button>
             </div>
           </div>
 
           <div className="col-12">
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
               {userProductData.map((product) => (
                 <div className="col" key={product._id}>
                   <div className="card product-card h-100 border-2 rounded-top-0 text-center">

@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div className='pt-3 ' style={{
-      height: '100%',
+      // height: '100vh',
       backgroundImage: 'url(https://cdn.pixabay.com/photo/2024/03/21/14/29/chevrolet-8647804_1280.jpg)',
       backgroundRepeat: ' round',
       backgroundAttachment: 'fixed',

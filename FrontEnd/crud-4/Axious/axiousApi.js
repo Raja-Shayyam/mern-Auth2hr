@@ -3,7 +3,8 @@ import axios from 'axios'
 // npx json-server --watch db.json --port 5000 //!   run it for
 
 export const APIreg = axios.create({
-  baseURL: 'https://mern-auth2hr-wvzs.vercel.app/registerAuth',
+  // baseURL: 'https://mern-auth2hr-wvzs.vercel.app/registerAuth',
+  baseURL: 'http://localhost:3000/registerAuth',
   withCredentials: true
 })
 
@@ -21,8 +22,8 @@ export const ToProt = () => {
 }
 
 export const APIProd = axios.create({
-  // baseURL: 'http://localhost:3000/myproducts',
-  baseURL: 'https://mern-auth2hr-wvzs.vercel.app/myproducts',
+  baseURL: 'http://localhost:3000/myproducts',
+  // baseURL: 'https://mern-auth2hr-wvzs.vercel.app/myproducts',
   withCredentials: true
 })
 

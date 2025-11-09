@@ -51,10 +51,10 @@ export const UserPersonalProducts = () => {
       }}>
         <div className="row">
           <div className="col-12 text-center mb-4">
-            <p className="h6 text-muted mb-3">NEW ARRIVALS</p>
+            <span className="h6 d-block text-light pb-2 mb-3 newArivaal-style">NEW ARRIVALS</span>
             <div className="btn-group" role="group" aria-label="Product categories">
-              <button type="button" className="btn btn-outline-dark me-2">Home & Decor</button>
-              <button type="button" className="btn btn-dark active">Lifestyle & Travel</button>
+              <button type="button" className="btn btn-dark me-2">Home & Decor</button>
+              <button type="button" className="btn btn-light active">Lifestyle & Travel</button>
             </div>
           </div>
 

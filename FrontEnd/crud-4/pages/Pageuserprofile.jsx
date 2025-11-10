@@ -77,14 +77,14 @@ export const Pageuserprofile = () => {
                 </button>
               </div>
 
-              <div className="profile mt-5 d-flex justify-content-between">
+              <div className="profile fs-1 mt-5 d-flex justify-content-between">
                 <button
-                  onClick={() => { dynamicNav('/userPersonalProducts') }} className="btn btn-dark px-3"
+                  onClick={() => { dynamicNav('/userPersonalProducts') }} className="fs btn btn-dark px-3"
                 >
                   View my Products
                 </button>
                 <button
-                  onClick={() => { dynamicNav('/Addproducts') }} className="btn btn-dark px-3"
+                  onClick={() => { dynamicNav('/Addproducts') }} className="fs btn btn-dark px-3"
                 >
                   Add products
                 </button>

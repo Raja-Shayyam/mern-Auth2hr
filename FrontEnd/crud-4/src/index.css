@@ -4,7 +4,7 @@ body::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 575px) {
- 
+
   /* .logo-margin {
   margin-right: clamp(1em, 5vw, 5em);
 /* minimum 1em, preferred 5vw, maximum 5em 
@@ -13,6 +13,10 @@ body::-webkit-scrollbar {
 
   .logo-margin {
     margin-right: 3vw !important;
+  }
+
+  .fs {
+    font-size: 11px !important;
   }
 
 }
